@@ -29,9 +29,9 @@ namespace Projekat_Dom_Zdravlja
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Pacijent));
             this.txt_Ime_Pacijenta = new System.Windows.Forms.TextBox();
             this.txt_Prezime_Pacijenta = new System.Windows.Forms.TextBox();
@@ -54,6 +54,9 @@ namespace Projekat_Dom_Zdravlja
             this.btn_Select = new System.Windows.Forms.Button();
             this.btn_Edit = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
+            this.txt_Search = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.search_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Pregled_Pacijenata)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,28 +64,28 @@ namespace Projekat_Dom_Zdravlja
             // 
             this.txt_Ime_Pacijenta.Location = new System.Drawing.Point(31, 48);
             this.txt_Ime_Pacijenta.Name = "txt_Ime_Pacijenta";
-            this.txt_Ime_Pacijenta.Size = new System.Drawing.Size(152, 23);
+            this.txt_Ime_Pacijenta.Size = new System.Drawing.Size(93, 23);
             this.txt_Ime_Pacijenta.TabIndex = 0;
             // 
             // txt_Prezime_Pacijenta
             // 
-            this.txt_Prezime_Pacijenta.Location = new System.Drawing.Point(211, 48);
+            this.txt_Prezime_Pacijenta.Location = new System.Drawing.Point(139, 48);
             this.txt_Prezime_Pacijenta.Name = "txt_Prezime_Pacijenta";
-            this.txt_Prezime_Pacijenta.Size = new System.Drawing.Size(163, 23);
+            this.txt_Prezime_Pacijenta.Size = new System.Drawing.Size(124, 23);
             this.txt_Prezime_Pacijenta.TabIndex = 1;
             // 
             // txt_Datum_Rodjenja_Pacijenta
             // 
-            this.txt_Datum_Rodjenja_Pacijenta.Location = new System.Drawing.Point(396, 48);
+            this.txt_Datum_Rodjenja_Pacijenta.Location = new System.Drawing.Point(280, 48);
             this.txt_Datum_Rodjenja_Pacijenta.Name = "txt_Datum_Rodjenja_Pacijenta";
-            this.txt_Datum_Rodjenja_Pacijenta.Size = new System.Drawing.Size(160, 23);
+            this.txt_Datum_Rodjenja_Pacijenta.Size = new System.Drawing.Size(131, 23);
             this.txt_Datum_Rodjenja_Pacijenta.TabIndex = 2;
             // 
             // txt_JMBG_Pacijenta
             // 
-            this.txt_JMBG_Pacijenta.Location = new System.Drawing.Point(602, 48);
+            this.txt_JMBG_Pacijenta.Location = new System.Drawing.Point(428, 48);
             this.txt_JMBG_Pacijenta.Name = "txt_JMBG_Pacijenta";
-            this.txt_JMBG_Pacijenta.Size = new System.Drawing.Size(167, 23);
+            this.txt_JMBG_Pacijenta.Size = new System.Drawing.Size(158, 23);
             this.txt_JMBG_Pacijenta.TabIndex = 3;
             // 
             // label1
@@ -97,7 +100,7 @@ namespace Projekat_Dom_Zdravlja
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(211, 27);
+            this.label2.Location = new System.Drawing.Point(139, 27);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 15);
             this.label2.TabIndex = 5;
@@ -106,7 +109,7 @@ namespace Projekat_Dom_Zdravlja
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(396, 27);
+            this.label3.Location = new System.Drawing.Point(280, 27);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 15);
             this.label3.TabIndex = 6;
@@ -115,7 +118,7 @@ namespace Projekat_Dom_Zdravlja
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(602, 27);
+            this.label4.Location = new System.Drawing.Point(428, 27);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 15);
             this.label4.TabIndex = 7;
@@ -128,14 +131,14 @@ namespace Projekat_Dom_Zdravlja
             this.dataGrid_Pregled_Pacijenata.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGrid_Pregled_Pacijenata.BackgroundColor = System.Drawing.Color.White;
             this.dataGrid_Pregled_Pacijenata.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.InactiveCaption;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrid_Pregled_Pacijenata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.InactiveCaption;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrid_Pregled_Pacijenata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGrid_Pregled_Pacijenata.ColumnHeadersHeight = 30;
             this.dataGrid_Pregled_Pacijenata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGrid_Pregled_Pacijenata.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -151,20 +154,20 @@ namespace Projekat_Dom_Zdravlja
             this.dataGrid_Pregled_Pacijenata.Location = new System.Drawing.Point(31, 77);
             this.dataGrid_Pregled_Pacijenata.MultiSelect = false;
             this.dataGrid_Pregled_Pacijenata.Name = "dataGrid_Pregled_Pacijenata";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrid_Pregled_Pacijenata.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrid_Pregled_Pacijenata.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGrid_Pregled_Pacijenata.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Snow;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGrid_Pregled_Pacijenata.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Snow;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGrid_Pregled_Pacijenata.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGrid_Pregled_Pacijenata.RowTemplate.Height = 25;
             this.dataGrid_Pregled_Pacijenata.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGrid_Pregled_Pacijenata.Size = new System.Drawing.Size(738, 224);
@@ -231,7 +234,7 @@ namespace Projekat_Dom_Zdravlja
             // 
             this.btn_Unos.Location = new System.Drawing.Point(31, 326);
             this.btn_Unos.Name = "btn_Unos";
-            this.btn_Unos.Size = new System.Drawing.Size(152, 36);
+            this.btn_Unos.Size = new System.Drawing.Size(137, 36);
             this.btn_Unos.TabIndex = 9;
             this.btn_Unos.Text = "Add";
             this.btn_Unos.UseVisualStyleBackColor = true;
@@ -239,9 +242,9 @@ namespace Projekat_Dom_Zdravlja
             // 
             // btn_Select
             // 
-            this.btn_Select.Location = new System.Drawing.Point(189, 326);
+            this.btn_Select.Location = new System.Drawing.Point(174, 326);
             this.btn_Select.Name = "btn_Select";
-            this.btn_Select.Size = new System.Drawing.Size(152, 36);
+            this.btn_Select.Size = new System.Drawing.Size(143, 36);
             this.btn_Select.TabIndex = 10;
             this.btn_Select.Text = "Select";
             this.btn_Select.UseVisualStyleBackColor = true;
@@ -249,9 +252,9 @@ namespace Projekat_Dom_Zdravlja
             // 
             // btn_Edit
             // 
-            this.btn_Edit.Location = new System.Drawing.Point(347, 326);
+            this.btn_Edit.Location = new System.Drawing.Point(323, 326);
             this.btn_Edit.Name = "btn_Edit";
-            this.btn_Edit.Size = new System.Drawing.Size(152, 36);
+            this.btn_Edit.Size = new System.Drawing.Size(132, 36);
             this.btn_Edit.TabIndex = 11;
             this.btn_Edit.Text = "Edit";
             this.btn_Edit.UseVisualStyleBackColor = true;
@@ -259,19 +262,48 @@ namespace Projekat_Dom_Zdravlja
             // 
             // btn_Delete
             // 
-            this.btn_Delete.Location = new System.Drawing.Point(505, 326);
+            this.btn_Delete.Location = new System.Drawing.Point(461, 326);
             this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(152, 36);
+            this.btn_Delete.Size = new System.Drawing.Size(150, 36);
             this.btn_Delete.TabIndex = 12;
             this.btn_Delete.Text = "Delete";
             this.btn_Delete.UseVisualStyleBackColor = true;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
+            // 
+            // txt_Search
+            // 
+            this.txt_Search.Location = new System.Drawing.Point(606, 47);
+            this.txt_Search.Name = "txt_Search";
+            this.txt_Search.Size = new System.Drawing.Size(163, 23);
+            this.txt_Search.TabIndex = 43;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(606, 27);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 15);
+            this.label5.TabIndex = 44;
+            this.label5.Text = "Search:";
+            // 
+            // search_btn
+            // 
+            this.search_btn.Location = new System.Drawing.Point(617, 326);
+            this.search_btn.Name = "search_btn";
+            this.search_btn.Size = new System.Drawing.Size(152, 36);
+            this.search_btn.TabIndex = 45;
+            this.search_btn.Text = "Search";
+            this.search_btn.UseVisualStyleBackColor = true;
+            this.search_btn.Click += new System.EventHandler(this.search_btn_Click);
             // 
             // frm_Pacijent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.search_btn);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txt_Search);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.btn_Edit);
             this.Controls.Add(this.btn_Select);
@@ -316,5 +348,8 @@ namespace Projekat_Dom_Zdravlja
         private System.Windows.Forms.DataGridViewImageColumn edit;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
         public System.Windows.Forms.DataGridView dataGrid_Pregled_Pacijenata;
+        private System.Windows.Forms.TextBox txt_Search;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button search_btn;
     }
 }

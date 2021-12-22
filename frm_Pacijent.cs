@@ -122,6 +122,23 @@ namespace Projekat_Dom_Zdravlja
             Ucitaj_Pacijente();
         }
 
+        private void search_btn_Click(object sender, EventArgs e)
+        {
+            int i = 0;
+            dataGrid_Pregled_Pacijenata.Rows.Clear();
+            connection.Open();
+            cmd = new SqlCommand("select p.id, p.ime, p.prezime, p.datum_rodjenja, p.jmbg from pacijent as p where p.ime like '" + txt_Search.Text + "%'", connection);
+            cmd.ExecuteNonQuery();
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                i++;
+                dataGrid_Pregled_Pacijenata.Rows.Add(i, dr["id"], dr["ime"], dr["prezime"], dr["datum_rodjenja"], dr["jmbg"]);
+            }
+            dr.Close();
+            connection.Close();
+        }
+
         private void dataGrid_Pregled_Pacijenata_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string col_name = dataGrid_Pregled_Pacijenata.Columns[e.ColumnIndex].Name;
