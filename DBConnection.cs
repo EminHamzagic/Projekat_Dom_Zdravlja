@@ -8,7 +8,7 @@ namespace Projekat_Dom_Zdravlja
     {
         public string MyConection()
         {
-            string con = @"Data Source=DESKTOP-MDQ23VJ; Initial Catalog=Dom_Zdravlja; Integrated Security=True";
+            string con = @"Data Source=DESKTOP-MDQ23VJ; Initial Catalog=Dom_Zdravlja_v2; Integrated Security=True";
             return con;
         }
     }

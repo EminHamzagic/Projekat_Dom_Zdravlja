@@ -26,8 +26,8 @@ namespace Projekat_Dom_Zdravlja
 
         private void zaposleniToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_Zaposleni Zaposleni = new frm_Zaposleni();
-            Zaposleni.Show();
+            frm_Doktori Doktori = new frm_Doktori();
+            Doktori.Show();
         }
     }
 }

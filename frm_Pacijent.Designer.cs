@@ -35,21 +35,13 @@ namespace Projekat_Dom_Zdravlja
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Pacijent));
             this.txt_Ime_Pacijenta = new System.Windows.Forms.TextBox();
             this.txt_Prezime_Pacijenta = new System.Windows.Forms.TextBox();
-            this.txt_Datum_Rodjenja_Pacijenta = new System.Windows.Forms.TextBox();
-            this.txt_JMBG_Pacijenta = new System.Windows.Forms.TextBox();
+            this.txt_Godine_Pacijenta = new System.Windows.Forms.TextBox();
+            this.txt_Adresa_Pacijenta = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGrid_Pregled_Pacijenata = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ime_Pacijenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prezime_Pacijenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datum_rodjenja = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jmbg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.edit = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.btn_Unos = new System.Windows.Forms.Button();
             this.btn_Select = new System.Windows.Forms.Button();
             this.btn_Edit = new System.Windows.Forms.Button();
@@ -57,6 +49,14 @@ namespace Projekat_Dom_Zdravlja
             this.txt_Search = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.search_btn = new System.Windows.Forms.Button();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ime_Pacijenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prezime_Pacijenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.godine = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Pregled_Pacijenata)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,19 +74,19 @@ namespace Projekat_Dom_Zdravlja
             this.txt_Prezime_Pacijenta.Size = new System.Drawing.Size(124, 23);
             this.txt_Prezime_Pacijenta.TabIndex = 1;
             // 
-            // txt_Datum_Rodjenja_Pacijenta
+            // txt_Godine_Pacijenta
             // 
-            this.txt_Datum_Rodjenja_Pacijenta.Location = new System.Drawing.Point(280, 48);
-            this.txt_Datum_Rodjenja_Pacijenta.Name = "txt_Datum_Rodjenja_Pacijenta";
-            this.txt_Datum_Rodjenja_Pacijenta.Size = new System.Drawing.Size(131, 23);
-            this.txt_Datum_Rodjenja_Pacijenta.TabIndex = 2;
+            this.txt_Godine_Pacijenta.Location = new System.Drawing.Point(280, 48);
+            this.txt_Godine_Pacijenta.Name = "txt_Godine_Pacijenta";
+            this.txt_Godine_Pacijenta.Size = new System.Drawing.Size(131, 23);
+            this.txt_Godine_Pacijenta.TabIndex = 2;
             // 
-            // txt_JMBG_Pacijenta
+            // txt_Adresa_Pacijenta
             // 
-            this.txt_JMBG_Pacijenta.Location = new System.Drawing.Point(428, 48);
-            this.txt_JMBG_Pacijenta.Name = "txt_JMBG_Pacijenta";
-            this.txt_JMBG_Pacijenta.Size = new System.Drawing.Size(158, 23);
-            this.txt_JMBG_Pacijenta.TabIndex = 3;
+            this.txt_Adresa_Pacijenta.Location = new System.Drawing.Point(428, 48);
+            this.txt_Adresa_Pacijenta.Name = "txt_Adresa_Pacijenta";
+            this.txt_Adresa_Pacijenta.Size = new System.Drawing.Size(158, 23);
+            this.txt_Adresa_Pacijenta.TabIndex = 3;
             // 
             // label1
             // 
@@ -111,18 +111,18 @@ namespace Projekat_Dom_Zdravlja
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(280, 27);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 15);
+            this.label3.Size = new System.Drawing.Size(48, 15);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Datum Rodjenja:";
+            this.label3.Text = "Godine:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(428, 27);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 15);
+            this.label4.Size = new System.Drawing.Size(43, 15);
             this.label4.TabIndex = 7;
-            this.label4.Text = "JMBG:";
+            this.label4.Text = "Adresa";
             // 
             // dataGrid_Pregled_Pacijenata
             // 
@@ -146,8 +146,8 @@ namespace Projekat_Dom_Zdravlja
             this.dataGridViewTextBoxColumn1,
             this.ime_Pacijenta,
             this.prezime_Pacijenta,
-            this.datum_rodjenja,
-            this.jmbg,
+            this.godine,
+            this.adresa,
             this.edit,
             this.Delete});
             this.dataGrid_Pregled_Pacijenata.EnableHeadersVisualStyles = false;
@@ -173,62 +173,6 @@ namespace Projekat_Dom_Zdravlja
             this.dataGrid_Pregled_Pacijenata.Size = new System.Drawing.Size(738, 224);
             this.dataGrid_Pregled_Pacijenata.TabIndex = 42;
             this.dataGrid_Pregled_Pacijenata.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_Pregled_Pacijenata_CellContentClick);
-            // 
-            // id
-            // 
-            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.id.HeaderText = "#";
-            this.id.Name = "id";
-            this.id.Width = 39;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // ime_Pacijenta
-            // 
-            this.ime_Pacijenta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ime_Pacijenta.HeaderText = "Ime Pacijenta";
-            this.ime_Pacijenta.Name = "ime_Pacijenta";
-            this.ime_Pacijenta.Width = 107;
-            // 
-            // prezime_Pacijenta
-            // 
-            this.prezime_Pacijenta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.prezime_Pacijenta.HeaderText = "Prezime Pacijenta";
-            this.prezime_Pacijenta.Name = "prezime_Pacijenta";
-            this.prezime_Pacijenta.Width = 132;
-            // 
-            // datum_rodjenja
-            // 
-            this.datum_rodjenja.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.datum_rodjenja.HeaderText = "Datum Rodjenja";
-            this.datum_rodjenja.Name = "datum_rodjenja";
-            this.datum_rodjenja.Width = 124;
-            // 
-            // jmbg
-            // 
-            this.jmbg.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.jmbg.HeaderText = "JMBG";
-            this.jmbg.Name = "jmbg";
-            this.jmbg.Width = 64;
-            // 
-            // edit
-            // 
-            this.edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.edit.HeaderText = "";
-            this.edit.Image = ((System.Drawing.Image)(resources.GetObject("edit.Image")));
-            this.edit.Name = "edit";
-            this.edit.Width = 5;
-            // 
-            // Delete
-            // 
-            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Delete.HeaderText = "";
-            this.Delete.Image = ((System.Drawing.Image)(resources.GetObject("Delete.Image")));
-            this.Delete.Name = "Delete";
-            this.Delete.Width = 5;
             // 
             // btn_Unos
             // 
@@ -296,6 +240,62 @@ namespace Projekat_Dom_Zdravlja
             this.search_btn.UseVisualStyleBackColor = true;
             this.search_btn.Click += new System.EventHandler(this.search_btn_Click);
             // 
+            // id
+            // 
+            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.id.HeaderText = "#";
+            this.id.Name = "id";
+            this.id.Width = 39;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // ime_Pacijenta
+            // 
+            this.ime_Pacijenta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ime_Pacijenta.HeaderText = "Ime Pacijenta";
+            this.ime_Pacijenta.Name = "ime_Pacijenta";
+            this.ime_Pacijenta.Width = 107;
+            // 
+            // prezime_Pacijenta
+            // 
+            this.prezime_Pacijenta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.prezime_Pacijenta.HeaderText = "Prezime Pacijenta";
+            this.prezime_Pacijenta.Name = "prezime_Pacijenta";
+            this.prezime_Pacijenta.Width = 132;
+            // 
+            // godine
+            // 
+            this.godine.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.godine.HeaderText = "Godine Pacijenta";
+            this.godine.Name = "godine";
+            this.godine.Width = 128;
+            // 
+            // adresa
+            // 
+            this.adresa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.adresa.HeaderText = "Adresa Pacijenta";
+            this.adresa.Name = "adresa";
+            this.adresa.Width = 127;
+            // 
+            // edit
+            // 
+            this.edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.edit.HeaderText = "";
+            this.edit.Image = ((System.Drawing.Image)(resources.GetObject("edit.Image")));
+            this.edit.Name = "edit";
+            this.edit.Width = 5;
+            // 
+            // Delete
+            // 
+            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Delete.HeaderText = "";
+            this.Delete.Image = ((System.Drawing.Image)(resources.GetObject("Delete.Image")));
+            this.Delete.Name = "Delete";
+            this.Delete.Width = 5;
+            // 
             // frm_Pacijent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -313,8 +313,8 @@ namespace Projekat_Dom_Zdravlja
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txt_JMBG_Pacijenta);
-            this.Controls.Add(this.txt_Datum_Rodjenja_Pacijenta);
+            this.Controls.Add(this.txt_Adresa_Pacijenta);
+            this.Controls.Add(this.txt_Godine_Pacijenta);
             this.Controls.Add(this.txt_Prezime_Pacijenta);
             this.Controls.Add(this.txt_Ime_Pacijenta);
             this.Name = "frm_Pacijent";
@@ -329,8 +329,8 @@ namespace Projekat_Dom_Zdravlja
 
         private System.Windows.Forms.TextBox txt_Ime_Pacijenta;
         private System.Windows.Forms.TextBox txt_Prezime_Pacijenta;
-        private System.Windows.Forms.TextBox txt_Datum_Rodjenja_Pacijenta;
-        private System.Windows.Forms.TextBox txt_JMBG_Pacijenta;
+        private System.Windows.Forms.TextBox txt_Godine_Pacijenta;
+        private System.Windows.Forms.TextBox txt_Adresa_Pacijenta;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -339,17 +339,17 @@ namespace Projekat_Dom_Zdravlja
         private System.Windows.Forms.Button btn_Select;
         private System.Windows.Forms.Button btn_Edit;
         private System.Windows.Forms.Button btn_Delete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ime_Pacijenta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prezime_Pacijenta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datum_rodjenja;
-        private System.Windows.Forms.DataGridViewTextBoxColumn jmbg;
-        private System.Windows.Forms.DataGridViewImageColumn edit;
-        private System.Windows.Forms.DataGridViewImageColumn Delete;
         public System.Windows.Forms.DataGridView dataGrid_Pregled_Pacijenata;
         private System.Windows.Forms.TextBox txt_Search;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button search_btn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ime_Pacijenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prezime_Pacijenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn godine;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adresa;
+        private System.Windows.Forms.DataGridViewImageColumn edit;
+        private System.Windows.Forms.DataGridViewImageColumn Delete;
     }
 }

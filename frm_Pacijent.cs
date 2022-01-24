@@ -25,17 +25,17 @@ namespace Projekat_Dom_Zdravlja
 
         private void btn_Unos_Click(object sender, EventArgs e)
         {
-            if (txt_Ime_Pacijenta.Text != "" && txt_Prezime_Pacijenta.Text != "" && txt_Datum_Rodjenja_Pacijenta.Text != "" && txt_JMBG_Pacijenta.Text != "")
+            if (txt_Ime_Pacijenta.Text != "" && txt_Prezime_Pacijenta.Text != "" && txt_Godine_Pacijenta.Text != "" && txt_Adresa_Pacijenta.Text != "")
             {
                 try
                 {
                     connection.Open();
-                    cmd = new SqlCommand("insert into pacijent (ime, prezime, datum_rodjenja, jmbg)" +
-                                         "values (@ime, @prezime, @datum_rodjenja, @jmbg)", connection);
+                    cmd = new SqlCommand("insert into pacijent (ime, prezime, godine, adresa)" +
+                                         "values (@ime, @prezime, @godine, @adresa)", connection);
                     cmd.Parameters.AddWithValue("@ime", txt_Ime_Pacijenta.Text);
                     cmd.Parameters.AddWithValue("@prezime", txt_Prezime_Pacijenta.Text);
-                    cmd.Parameters.AddWithValue("@datum_rodjenja", txt_Datum_Rodjenja_Pacijenta.Text);
-                    cmd.Parameters.AddWithValue("@jmbg", txt_JMBG_Pacijenta.Text);
+                    cmd.Parameters.AddWithValue("@godine", txt_Godine_Pacijenta.Text);
+                    cmd.Parameters.AddWithValue("@adresa", txt_Adresa_Pacijenta.Text);
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Uspešno ste dodadali novog pacijenta", "Ovbevestenje", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -52,19 +52,23 @@ namespace Projekat_Dom_Zdravlja
                 MessageBox.Show("Niste uneli potrebne podatke o pacijentu", "Ovbevestenje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             Ucitaj_Pacijente();
+            txt_Ime_Pacijenta.Clear();
+            txt_Prezime_Pacijenta.Clear();
+            txt_Godine_Pacijenta.Clear();
+            txt_Adresa_Pacijenta.Clear();
         }
         void Ucitaj_Pacijente()
         {
             int i = 0;
             dataGrid_Pregled_Pacijenata.Rows.Clear();
             connection.Open();
-            cmd = new SqlCommand("select p.id, p.ime, p.prezime, p.datum_rodjenja, p.jmbg from pacijent as p", connection);
+            cmd = new SqlCommand("select p.id, p.ime, p.prezime, p.godine, p.adresa from pacijent as p", connection);
             cmd.ExecuteNonQuery();
             dr = cmd.ExecuteReader();
             while (dr.Read())
             {
                 i++;
-                dataGrid_Pregled_Pacijenata.Rows.Add(i, dr["id"], dr["ime"], dr["prezime"], dr["datum_rodjenja"], dr["jmbg"]);
+                dataGrid_Pregled_Pacijenata.Rows.Add(i, dr["id"], dr["ime"], dr["prezime"], dr["godine"], dr["adresa"]);
             }
             dr.Close();
             connection.Close();
@@ -95,12 +99,12 @@ namespace Projekat_Dom_Zdravlja
         private void btn_Edit_Click(object sender, EventArgs e)
         {
             connection.Open();
-            cmd = new SqlCommand("update pacijent set ime=@ime, prezime=@prezime, datum_rodjenja=@datum_rodjenja, jmbg=@jmbg" +
+            cmd = new SqlCommand("update pacijent set ime=@ime, prezime=@prezime, godine=@godine, adresa=@adresa" +
                                  " where id=" + id_grida, connection);
             cmd.Parameters.AddWithValue("@ime", txt_Ime_Pacijenta.Text);
             cmd.Parameters.AddWithValue("@prezime", txt_Prezime_Pacijenta.Text);
-            cmd.Parameters.AddWithValue("@datum_rodjenja", txt_Datum_Rodjenja_Pacijenta.Text);
-            cmd.Parameters.AddWithValue("@jmbg", txt_JMBG_Pacijenta.Text);
+            cmd.Parameters.AddWithValue("@godine", txt_Godine_Pacijenta.Text);
+            cmd.Parameters.AddWithValue("@adresa", txt_Adresa_Pacijenta.Text);
 
             cmd.ExecuteNonQuery();
             connection.Close();
@@ -113,8 +117,8 @@ namespace Projekat_Dom_Zdravlja
 
             txt_Ime_Pacijenta.Clear();
             txt_Prezime_Pacijenta.Clear();
-            txt_Datum_Rodjenja_Pacijenta.Clear();
-            txt_JMBG_Pacijenta.Clear();
+            txt_Godine_Pacijenta.Clear();
+            txt_Adresa_Pacijenta.Clear();
         }
 
         private void btn_Select_Click(object sender, EventArgs e)
@@ -127,13 +131,13 @@ namespace Projekat_Dom_Zdravlja
             int i = 0;
             dataGrid_Pregled_Pacijenata.Rows.Clear();
             connection.Open();
-            cmd = new SqlCommand("select p.id, p.ime, p.prezime, p.datum_rodjenja, p.jmbg from pacijent as p where p.ime like '" + txt_Search.Text + "%'", connection);
+            cmd = new SqlCommand("select p.id, p.ime, p.prezime, p.godine, p.adresa from pacijent as p where p.ime like '" + txt_Search.Text + "%'", connection);
             cmd.ExecuteNonQuery();
             dr = cmd.ExecuteReader();
             while (dr.Read())
             {
                 i++;
-                dataGrid_Pregled_Pacijenata.Rows.Add(i, dr["id"], dr["ime"], dr["prezime"], dr["datum_rodjenja"], dr["jmbg"]);
+                dataGrid_Pregled_Pacijenata.Rows.Add(i, dr["id"], dr["ime"], dr["prezime"], dr["godine"], dr["adresa"]);
             }
             dr.Close();
             connection.Close();
@@ -155,8 +159,8 @@ namespace Projekat_Dom_Zdravlja
                 {
                     txt_Ime_Pacijenta.Text = dr["ime"].ToString();
                     txt_Prezime_Pacijenta.Text = dr["prezime"].ToString();
-                    txt_Datum_Rodjenja_Pacijenta.Text = dr["datum_rodjenja"].ToString();
-                    txt_JMBG_Pacijenta.Text = dr["jmbg"].ToString();
+                    txt_Godine_Pacijenta.Text = dr["godine"].ToString();
+                    txt_Adresa_Pacijenta.Text = dr["adresa"].ToString();
                 }
                 dr.Close();
                 connection.Close();
