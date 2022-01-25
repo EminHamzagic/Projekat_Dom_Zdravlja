@@ -33,7 +33,9 @@ namespace Projekat_Dom_Zdravlja
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pacijentiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zaposleniToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.zdrastveniKartoniToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lecenjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dijagnozeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.preglediToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +54,9 @@ namespace Projekat_Dom_Zdravlja
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pacijentiToolStripMenuItem,
             this.zaposleniToolStripMenuItem,
-            this.zdrastveniKartoniToolStripMenuItem});
+            this.lecenjaToolStripMenuItem,
+            this.dijagnozeToolStripMenuItem,
+            this.preglediToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
@@ -71,11 +75,26 @@ namespace Projekat_Dom_Zdravlja
             this.zaposleniToolStripMenuItem.Text = "Doktori";
             this.zaposleniToolStripMenuItem.Click += new System.EventHandler(this.zaposleniToolStripMenuItem_Click);
             // 
-            // zdrastveniKartoniToolStripMenuItem
+            // lecenjaToolStripMenuItem
             // 
-            this.zdrastveniKartoniToolStripMenuItem.Name = "zdrastveniKartoniToolStripMenuItem";
-            this.zdrastveniKartoniToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.zdrastveniKartoniToolStripMenuItem.Text = "Zdrastveni Kartoni";
+            this.lecenjaToolStripMenuItem.Name = "lecenjaToolStripMenuItem";
+            this.lecenjaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lecenjaToolStripMenuItem.Text = "Lecenja";
+            this.lecenjaToolStripMenuItem.Click += new System.EventHandler(this.zdrastveniKartoniToolStripMenuItem_Click);
+            // 
+            // dijagnozeToolStripMenuItem
+            // 
+            this.dijagnozeToolStripMenuItem.Name = "dijagnozeToolStripMenuItem";
+            this.dijagnozeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dijagnozeToolStripMenuItem.Text = "Dijagnoze";
+            this.dijagnozeToolStripMenuItem.Click += new System.EventHandler(this.dijagnozeToolStripMenuItem_Click);
+            // 
+            // preglediToolStripMenuItem
+            // 
+            this.preglediToolStripMenuItem.Name = "preglediToolStripMenuItem";
+            this.preglediToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.preglediToolStripMenuItem.Text = "Pregledi";
+            this.preglediToolStripMenuItem.Click += new System.EventHandler(this.preglediToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -85,7 +104,7 @@ namespace Projekat_Dom_Zdravlja
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Main_form";
+            this.Text = "Klinika Hamzagic";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -99,7 +118,9 @@ namespace Projekat_Dom_Zdravlja
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pacijentiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zaposleniToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem zdrastveniKartoniToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lecenjaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dijagnozeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem preglediToolStripMenuItem;
     }
 }
 

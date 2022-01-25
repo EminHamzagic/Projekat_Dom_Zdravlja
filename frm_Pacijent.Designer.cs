@@ -42,13 +42,6 @@ namespace Projekat_Dom_Zdravlja
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGrid_Pregled_Pacijenata = new System.Windows.Forms.DataGridView();
-            this.btn_Unos = new System.Windows.Forms.Button();
-            this.btn_Select = new System.Windows.Forms.Button();
-            this.btn_Edit = new System.Windows.Forms.Button();
-            this.btn_Delete = new System.Windows.Forms.Button();
-            this.txt_Search = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.search_btn = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ime_Pacijenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +50,13 @@ namespace Projekat_Dom_Zdravlja
             this.adresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btn_Unos = new System.Windows.Forms.Button();
+            this.btn_Select = new System.Windows.Forms.Button();
+            this.btn_Edit = new System.Windows.Forms.Button();
+            this.btn_Delete = new System.Windows.Forms.Button();
+            this.txt_Search = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.search_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Pregled_Pacijenata)).BeginInit();
             this.SuspendLayout();
             // 
@@ -174,6 +174,62 @@ namespace Projekat_Dom_Zdravlja
             this.dataGrid_Pregled_Pacijenata.TabIndex = 42;
             this.dataGrid_Pregled_Pacijenata.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_Pregled_Pacijenata_CellContentClick);
             // 
+            // id
+            // 
+            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.id.HeaderText = "#";
+            this.id.Name = "id";
+            this.id.Width = 39;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // ime_Pacijenta
+            // 
+            this.ime_Pacijenta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ime_Pacijenta.HeaderText = "Ime Pacijenta";
+            this.ime_Pacijenta.Name = "ime_Pacijenta";
+            this.ime_Pacijenta.Width = 107;
+            // 
+            // prezime_Pacijenta
+            // 
+            this.prezime_Pacijenta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.prezime_Pacijenta.HeaderText = "Prezime Pacijenta";
+            this.prezime_Pacijenta.Name = "prezime_Pacijenta";
+            this.prezime_Pacijenta.Width = 132;
+            // 
+            // godine
+            // 
+            this.godine.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.godine.HeaderText = "Godine Pacijenta";
+            this.godine.Name = "godine";
+            this.godine.Width = 128;
+            // 
+            // adresa
+            // 
+            this.adresa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.adresa.HeaderText = "Adresa Pacijenta";
+            this.adresa.Name = "adresa";
+            this.adresa.Width = 127;
+            // 
+            // edit
+            // 
+            this.edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.edit.HeaderText = "";
+            this.edit.Image = ((System.Drawing.Image)(resources.GetObject("edit.Image")));
+            this.edit.Name = "edit";
+            this.edit.Width = 5;
+            // 
+            // Delete
+            // 
+            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Delete.HeaderText = "";
+            this.Delete.Image = ((System.Drawing.Image)(resources.GetObject("Delete.Image")));
+            this.Delete.Name = "Delete";
+            this.Delete.Width = 5;
+            // 
             // btn_Unos
             // 
             this.btn_Unos.Location = new System.Drawing.Point(31, 326);
@@ -240,62 +296,6 @@ namespace Projekat_Dom_Zdravlja
             this.search_btn.UseVisualStyleBackColor = true;
             this.search_btn.Click += new System.EventHandler(this.search_btn_Click);
             // 
-            // id
-            // 
-            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.id.HeaderText = "#";
-            this.id.Name = "id";
-            this.id.Width = 39;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // ime_Pacijenta
-            // 
-            this.ime_Pacijenta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ime_Pacijenta.HeaderText = "Ime Pacijenta";
-            this.ime_Pacijenta.Name = "ime_Pacijenta";
-            this.ime_Pacijenta.Width = 107;
-            // 
-            // prezime_Pacijenta
-            // 
-            this.prezime_Pacijenta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.prezime_Pacijenta.HeaderText = "Prezime Pacijenta";
-            this.prezime_Pacijenta.Name = "prezime_Pacijenta";
-            this.prezime_Pacijenta.Width = 132;
-            // 
-            // godine
-            // 
-            this.godine.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.godine.HeaderText = "Godine Pacijenta";
-            this.godine.Name = "godine";
-            this.godine.Width = 128;
-            // 
-            // adresa
-            // 
-            this.adresa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.adresa.HeaderText = "Adresa Pacijenta";
-            this.adresa.Name = "adresa";
-            this.adresa.Width = 127;
-            // 
-            // edit
-            // 
-            this.edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.edit.HeaderText = "";
-            this.edit.Image = ((System.Drawing.Image)(resources.GetObject("edit.Image")));
-            this.edit.Name = "edit";
-            this.edit.Width = 5;
-            // 
-            // Delete
-            // 
-            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Delete.HeaderText = "";
-            this.Delete.Image = ((System.Drawing.Image)(resources.GetObject("Delete.Image")));
-            this.Delete.Name = "Delete";
-            this.Delete.Width = 5;
-            // 
             // frm_Pacijent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -318,7 +318,7 @@ namespace Projekat_Dom_Zdravlja
             this.Controls.Add(this.txt_Prezime_Pacijenta);
             this.Controls.Add(this.txt_Ime_Pacijenta);
             this.Name = "frm_Pacijent";
-            this.Text = "frm_Pacijent";
+            this.Text = "Pacijenti";
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Pregled_Pacijenata)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

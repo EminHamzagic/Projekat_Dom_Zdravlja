@@ -29,5 +29,23 @@ namespace Projekat_Dom_Zdravlja
             frm_Doktori Doktori = new frm_Doktori();
             Doktori.Show();
         }
+
+        private void zdrastveniKartoniToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_Lecenja Lecenja = new frm_Lecenja();
+            Lecenja.Show();
+        }
+
+        private void dijagnozeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_Dijagnoze Dijagnoze = new frm_Dijagnoze();
+            Dijagnoze.Show();
+        }
+
+        private void preglediToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_Pregledi Pregledi = new frm_Pregledi();
+            Pregledi.Show();
+        }
     }
 }
